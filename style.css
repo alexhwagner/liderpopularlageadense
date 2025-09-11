@@ -1,0 +1,176 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ :root {
+ --text-color: hwb(0 18% 74%);
+ }
+
+
+   body {
+  background-image: url('./assets/fotooficial.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;/
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+  animation: fadein 1.2s ease;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(30px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+#container {
+    width: 100%;
+    max-width: 588px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+}
+
+#profile {
+    text-align: center;  
+    padding: 24px;
+}
+
+#profile img {
+    width: 112px;
+    border: 2px solid rgb(153, 32, 32); /* borda preta */
+    border-radius: 50%; /* deixa a borda arredondada */
+}
+#profile p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: hwb(103 4% 62%);
+    text-shadow:  1px 1px 8px rgb(223, 176, 176);/* sombra para destacar */
+    line-height: 24px;
+    margin-top: 12px;
+    letter-spacing: 1px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+
+/*lista*/
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24;
+} 
+
+ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background: rgba(197, 89, 89, 0.18);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    color: #222;
+    border-radius: 29px;
+    backdrop-filter: blur(0.8px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.5s, transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.5s;
+    box-shadow: 0 8px 32px rgba(69, 123, 157, 0.18), inset 0 2px 12px rgba(230, 57, 70, 0.12);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* REMOVA animation: bounceIn ... */
+}
+
+ul li a:hover {
+    background: linear-gradient(90deg, #ac3636 0%, #508642 100%);
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(69, 123, 157, 0.18), inset 0 2px 12px rgba(230, 57, 70, 0.12);
+    transform: scale(1.12);
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 40px;
+    gap: 16px;;
+    color: rgb(206, 232, 255);
+}
+
+#social-links a {
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 16px;
+    border-radius: 50%;
+    color: rgb(206, 232, 255);
+}
+
+#social-links a:hover {
+    background: rgba(206, 194, 194, 0.993);
+    border-radius: 50%;
+    justify-content: center;
+    transform: translateY(-8px) scale(1.1);
+}
+
+/* ...existing code... */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px; /* ajuste conforme necessário */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* espaço entre as caixas */
+}
+
+li {
+  width: 100%;
+}
+
+#social-links a ion-icon {
+    color: #070707; /* cor rosa do Instagram */
+}
+
+/* Animação de entrada para os ícones sociais */
+#social-links a {
+    animation: fadeInUp 1.2s ease both;
+}
+
+/* Keyframes para animações */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(40px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-10px);
+    }
+    80% {
+        transform: scale(0.95) translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Fim do código existente */
